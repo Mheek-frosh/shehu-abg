@@ -1,5 +1,5 @@
 export const site = {
-  name: "Shehu ABG",
+  name: "Shehu ABG IMPACT",
   fullName: "Hon. Usman Shehu Bawa",
   tagline: "Son of Kaduna. Servant of the people.",
   description:
