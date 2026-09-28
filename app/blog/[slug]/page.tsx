@@ -148,7 +148,10 @@ export default async function BlogPostPage({
                     : item.date}
                 </p>
                 <h3 className="display mt-3 text-[1.7rem]">
-                  <Link className="link" href={`/blog/${item.slug}`}>
+                  <Link
+                    className="transition-colors hover:text-accent"
+                    href={`/blog/${item.slug}`}
+                  >
                     {item.title}
                   </Link>
                 </h3>

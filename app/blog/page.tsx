@@ -37,7 +37,10 @@ export default function BlogPage() {
                   : featured.date}
               </p>
               <h2 className="display mt-4 text-[10vw] md:text-[4.2vw]">
-                <Link className="link" href={`/blog/${featured.slug}`}>
+                <Link
+                  className="transition-colors hover:text-accent"
+                  href={`/blog/${featured.slug}`}
+                >
                   {featured.title}
                 </Link>
               </h2>
