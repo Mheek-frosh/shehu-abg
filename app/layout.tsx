@@ -16,10 +16,35 @@ const instrument = Instrument_Sans({
   variable: "--font-instrument",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: `${site.fullName} · ${site.tagline}`,
   description: site.description,
   icons: { icon: "/favicon.svg" },
+  openGraph: {
+    title: `${site.name} · ${site.tagline}`,
+    description: site.description,
+    images: [
+      {
+        url: "/media/photos/portrait.jpeg",
+        alt: "Hon. Usman Shehu Bawa",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} · ${site.tagline}`,
+    description: site.description,
+    images: ["/media/photos/portrait.jpeg"],
+  },
 };
 
 export default function RootLayout({
