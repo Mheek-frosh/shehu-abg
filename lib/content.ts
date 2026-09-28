@@ -17,9 +17,20 @@ export const site = {
 
 export const nav = [
   { href: "/story", label: "Story" },
+  { href: "/impact", label: "Impact" },
+  { href: "/blog", label: "Blog" },
   { href: "/media", label: "Media" },
   { href: "/join", label: "Join" },
 ];
+
+export type PhotoContent = {
+  src: string;
+  alt: string;
+  caption: string;
+  description: string;
+  credit: string;
+  license: string;
+};
 
 export const chapters = [
   {
@@ -105,7 +116,7 @@ export const numbers = [
   },
 ];
 
-export const photos = [
+export const photos: PhotoContent[] = [
   {
     src: "/media/photos/ahead.jpeg",
     alt: "Shehu Bawa looking ahead",
@@ -175,6 +186,75 @@ export const photos = [
       "The argument of the campaign is not a camera crew in election season. It is presence across faith and ethnic lines.",
     credit: "Campaign gallery via usmanshehubawa.ng",
     license: "Editorial use",
+  },
+];
+
+export const impactPhotos: PhotoContent[] = [
+  {
+    src: "/media/photos/car01.jpeg",
+    alt: "Four men in traditional dress beside a light blue car during a key handover",
+    caption: "Keys in hand",
+    description:
+      "A handover during an ABG empowerment initiative, with the keys passed beside the vehicle.",
+    credit: "Shehu ABG Impact Team",
+    license: "Editorial use",
+  },
+  {
+    src: "/media/photos/car1.jpeg",
+    alt: "A community member holding vehicle keys beside a car",
+    caption: "A new set of keys",
+    description:
+      "A moment from an ABG empowerment initiative, marking practical support for mobility.",
+    credit: "Shehu ABG Impact Team",
+    license: "Editorial use",
+  },
+  {
+    src: "/media/photos/car2.jpeg",
+    alt: "A community member standing beside a car with family and community members",
+    caption: "A moment shared",
+    description:
+      "Community members gather around a vehicle during an empowerment handover.",
+    credit: "Shehu ABG Impact Team",
+    license: "Editorial use",
+  },
+  {
+    src: "/media/photos/car3.jpeg",
+    alt: "A community member holding keys beside a car",
+    caption: "Opportunity in motion",
+    description:
+      "A beneficiary holds the keys to a vehicle provided through empowerment support.",
+    credit: "Shehu ABG Impact Team",
+    license: "Editorial use",
+  },
+  {
+    src: "/media/photos/car4.jpeg",
+    alt: "Community members gathered beside a car during a handover",
+    caption: "Progress, together",
+    description:
+      "Community members share a moment during an ABG empowerment handover.",
+    credit: "Shehu ABG Impact Team",
+    license: "Editorial use",
+  },
+];
+
+export const impactProjects = [
+  {
+    slug: "celebrating-beneficiaries-of-abg-empowerment",
+    title: "Throwback: Celebrating Beneficiaries of ABG Empowerment",
+    author: "Shehu ABG Impact Team",
+    date: "August 28, 2026",
+    dateTime: "2026-08-28",
+    summary:
+      "A look back at some of the people reached through ABG empowerment support—and the hope that continues to inspire the work ahead.",
+    paragraphs: [
+      "These throwback pictures capture some of the beneficiaries of ABG empowerment initiatives and the moments when practical support was placed directly into the hands of members of the community.",
+      "The empowerment effort reflects a belief that people thrive when they are given opportunities and resources that can help them become more productive, independent, and confident about the future. Support such as mobility assistance can open new possibilities for work, enterprise, and improved livelihoods.",
+      "Beyond every presentation is a personal story, a family, and a wider community that can benefit when one person is empowered. These moments remain a reminder that meaningful impact begins by listening to people and responding to their real needs.",
+      "Looking back, we are grateful for the lives reached, the trust shared, and the progress made together. Every beneficiary represents a reason to keep building initiatives that create dignity, opportunity, and lasting value.",
+      "As we look ahead, we do so with hope and a renewed commitment to expanding empowerment opportunities across Kaduna State. The journey continues, and the goal remains clear: to help more people turn opportunity into sustainable progress.",
+    ],
+    closing: "Looking back with gratitude and looking ahead with hope.",
+    images: impactPhotos,
   },
 ];
 

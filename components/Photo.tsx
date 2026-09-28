@@ -1,9 +1,9 @@
 "use client";
 
 import { createContext, useContext, useMemo, useState } from "react";
-import { photos } from "@/lib/content";
+import type { PhotoContent } from "@/lib/content";
 
-type PhotoMeta = (typeof photos)[number];
+type PhotoMeta = PhotoContent;
 
 const PhotoContext = createContext<{
   open: (photo: PhotoMeta) => void;
